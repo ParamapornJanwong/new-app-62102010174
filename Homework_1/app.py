@@ -43,7 +43,7 @@ def home():
     return render_template("home.html", weather=weather,result=result,news=news)
 
 def CovidNews():
-    url = "http://newsapi.org/v2/everything?q=tesla&from=2021-01-01&sortBy=publishedAt&apiKey=e1ebb02e162045cfb0581f1523c3072e"
+    url = "http://newsapi.org/v2/everything?q=covid&from=2021-01-01&sortBy=publishedAt&apiKey=e1ebb02e162045cfb0581f1523c3072e"
     data = urlopen(url).read()
     parsed = json.loads(data)
     news = []
